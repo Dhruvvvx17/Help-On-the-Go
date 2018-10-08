@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script src="login.js">
+    </script>
+    </head>
+    <body>
+        <div class="header">
+            <a href="#default" class="logo">Help On The Go</a>
+            <div class="header-right">
+                <a href="#home">Home</a>
+                <a class="active" href="#login">Login</a>
+                <div class = "dropdown">
+                    <button class = "dropbtn">
+                        Sign Up
+                    </button>
+                    <div class="dropdown-content">
+                       <a href="signup_user.html">User</a>
+                       <a href="signup_worker.html">Worker</a>
+                       <a href="#">Apartment</a>
+                    </div>
+                </div>
+                <a href="#about">About</a>
+            </div>
+        </div>
+        <div class = "loginbox">
+            <img src="Avatar.jpg" class="avatar" alt="Avatar">
+            <h1>LOGIN</h1>
+            <form>
+                <p>Username</p>
+                <input type="text" name="" placeholder="Enter Username">
+                <p>Password</p>
+                <input type="password" id="pwd" name="" placeholder="Enter Password">
+                <input type="checkbox" onclick="showPassword()" style="width:15px; margin-left: 0px;">Show Password
+                <input type="button" name="" value="Login">
+                <a href="forgotPW.html">Forgot Password?</a> 
+                <br> 
+                <a href="signup_user.html">New Here? Sign up!</a>  
+            </form>
+        </div>
+        <div class="footer">
+             © Webception · 2018
+        </div>
+    </body>
+
+</html>
