@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" type="text/css" href="signup_user.css">
+    <script src="signup_user.js">
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <a href="#default" class="logo">Help On The Go</a>
+        <div class="header-right">
+            <a href="homepage-final.html">Home</a>
+            <a href="login.html">Login</a>
+            <div class = dropdown  >
+                <button class = "dropbtn" style="background-color: dodgerblue ; color: white;">
+                    Sign Up
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">User</a>
+                    <a href="signup_worker.html">Worker</a>
+                    <a href="#">Apartment</a>
+                </div>
+            </div>
+            <a href="#about">About</a>
+        </div>
+    </div>
+
+    <div class="signupbox_user">
+        <img src="Avatar.jpg" class="avatar" alt="Avatar">
+        <h1>SIGN UP AS A USER</h1>
+        <div class="left">
+            <form>
+                <p>First Name <sup>*</sup></p>
+                <input type="text" id="fname" name="" placeholder="Enter Firstname" required>
+                <p>Last Name <sup>*</sup></p>
+                <input type="text" id="lname" name="" placeholder="Enter Lastname" required>
+                <p>E-Mail <sup>*</sup></p>
+                <input type="Email" id="email" name="" placeholder="Enter Email ID" required>
+                <p id="alert1" value="" style="font-weight: normal;margin-bottom: 10px;display: none;color:red;"></p>
+                <p>Phone Number <sup>*</sup></p>
+                <input type="tel" id="phno" name="" pattern="[0-9]{10}" placeholder="Enter Ph. Number" required>
+                <p id="alert3" value="" style="font-weight: normal;margin-bottom: 10px;color:white;"><sup>*</sup> Mandatory Fields</p>
+            </form>
+        </div>
+        <div class="right">
+            <form>
+                <p> Address <sup>*</sup></p>
+                <input type="text" id="addr" name="" placeholder="Enter Address" required>
+                <p>UserName <sup>*</sup></p>
+                <input type="text" id="uname" name="" placeholder="Enter Username" required>
+                <p id="alert2" value="" style="font-weight: normal;margin-bottom: 10px;display: none;color:red;"></p>
+                <p>Password <sup>*</sup></p>
+                <input type="password" id = "pwd" name="" placeholder="Enter Password" required >
+                <p>Re-enter Password <sup>*</sup></p>
+                <input type="password" id = "pwd2" name="" placeholder="Re-Enter Password" required><br>
+                <input type="checkbox" onclick="showPassword()" style="width:15px; margin-left: 240px;">Show Password
+                
+            </form>
+        </div>
+        <div class="submitbox">
+            <form>
+                <input type="button" onclick ="Validation()" name="" value="Sign Up!">
+                <br>
+                <a href="login.html">Already a Member? Login </a>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        © Webception · 2018
+    </div>
+</body>
+
+</html>
