@@ -1,13 +1,12 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(background.jpeg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: url(bgimage.jpg);
     background-size: cover;
     background-position: center;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 
 /* USER SIGN UP BOX */
 .signupbox_worker{
@@ -15,7 +14,7 @@ body{
     height: 850px;
     background: #000;
     color: #fff;
-    opacity: 0.8;
+    opacity: 0.9;
     margin-top: 480px;
     left: 50%;
     position: absolute;
