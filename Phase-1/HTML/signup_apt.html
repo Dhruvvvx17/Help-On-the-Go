@@ -1,22 +1,49 @@
-body{
+<html>
+
+<head>
+    <title>Apartment Registration</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/signup_worker.css">
+    <style type="text/css">
+    *{
+        margin:0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+    .title{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+
+    body{
     margin: 0;
     padding: 0;
-    background: url(background.jpeg);
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../Images/bgimage.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     font-family: Arial, Helvetica, sans-serif;
-}
+    }
+
+    .title h1{color: #ffffff;
+        font-size:40px;
+        /*float: left;*/
+        /*margin-right: 1000px;*/
+    }
+
 
 /* USER SIGN UP BOX */
 .signupbox_worker{
-    width: 840px;
-    height: 850px;
+    width: 920px;
+    height: 720px;
     background: #000;
     color: #fff;
     opacity: 0.8;
-    margin-top: 480px;
+    margin-top: 420px;
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
@@ -71,7 +98,7 @@ h1{
 
 
     /* First Name , Last Name , Email , Ph no.*/
-.signupbox_worker input[type="text"] , [type="email"] , [type="password"], [type="tel"] ,[type="number"] ,input[list]{
+.signupbox_worker input[type="text"] , [type="email"] , [type="password"], [type="tel"] ,[type="number"]{
     border:none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -84,11 +111,11 @@ h1{
 .signupbox_worker input[type="checkbox"]{
     width: 20%;
     margin-bottom: 20px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .signupbox_worker input[type="radio"]{
-    width: 10%;
+    width: 20%;
     margin-top: 5px;
 }
 
@@ -111,13 +138,13 @@ h1{
     /* left:260px;
     top:415px; */
     left: 33%;
-    top: 87%;
+    top: 85%;
     position: absolute;
     background: #000;
     padding: 20px 20px;
 }
 
-.submitbox input[type="button"]{
+.submitbox input[type="submit"]{
 
     width: 50%;
     margin-bottom: 15px;
@@ -132,7 +159,7 @@ h1{
     margin-left: 60px;
 }
 
- .submitbox input[type="button"]:hover{
+ .submitbox input[type="submit"]:hover{
     cursor:pointer;
     background: #ffc107;
     color: #000;
@@ -155,7 +182,7 @@ h1{
 /* HEADER */
 .header{
         overflow: hidden;
-        background-color: #f1f1f1;
+        background-image: url(bgimage.jpg);
         padding: 20px 20px;
     }
 
@@ -268,10 +295,86 @@ h1{
 
 /* FOOTER */
 .footer{
-        overflow: hidden;
-        /* background-color: #f1f1f1; */
+overflow: hidden;
+        color: #f1f1f1;
         padding: 6px 10px;
         position: fixed;
         left: 0;
         bottom: 0;
 }
+    </style>
+</head>
+
+<body>
+    </div>
+    <div class="header">
+        <a href="#default" class="logo">Help On The Go</a>
+        <div class="header-right">
+            <a href="homepage-final.html">Home</a>
+            <a href="login.html">Login</a>
+            <div class=dropdown>
+                <button class="dropbtn" style="background-color: dodgerblue ; color: white;">
+                    Sign Up
+                </button>
+                <div class="dropdown-content">
+                    <a href="signup_user.html">User</a>
+                    <a href="signup_worker.html">Worker</a>
+                    <a href="signup_apt.html">Apartment</a>
+                </div>
+            </div>
+            <a href="#about">About</a>
+        </div>
+    </div>
+    <div class="signupbox_worker">
+        <img src="../Images/apt.jpg" class="avatar" alt="Avatar">
+        <h1>REGISTER YOUR APARTMENT WITH US</h1>
+        <div class="left">
+            <form>
+                <p>Apartment's Name</p>
+                <input type="text" name="" placeholder="Enter The Apartment's Name">
+                <!-- <p>Last Name</p> -->
+                <!-- <input type="text" name="" placeholder="Enter Lastname"> -->
+                <p>BDA Approved?</p>
+                <input type="radio" name="gender">Yes<br>
+                <input type="radio" name="gender">No
+                <p>E-Mail</p>
+                <input type="Email" name="" placeholder="Enter Email ID of Management Head">
+                <p>Phone Number</p>
+                <input type="tel" name="" placeholder="Enter Ph. Number of Management Head">
+                <p> Address </p>
+                <input type="text" name="" placeholder="Enter Address of the Apartment">
+                
+            </form>
+        </div>
+        <div class="right">
+            <form>    
+                <p style="margin-bottom:10px;">Please Select the Class of Helpers Required</p>
+                <input type="checkbox" name="work1" value="Maid">House Maid <br>
+                <input type="checkbox" name="work2" value="Cook"> Cook<br>
+                <input type="checkbox" name="work3" value="Driver"> Driver
+                <!-- <p>Expected charges per hour (in Rupees)</p>
+                <input type="number" name="" placeholder="Expected charges per hour"> -->
+               <!--  <p>Expected Work Timings</p>
+                From &nbsp;<input type="time" name=""> &nbsp;&nbsp;&nbsp;To&nbsp;<input type="time" name=""> -->
+                <p>UserName</p>
+                <input type="text" name="" placeholder="Enter Username for Head of Management">
+                <p>Password</p>
+                <input type="password" name="" placeholder="Enter Password for Head of Management">
+                <!-- <p>Re-enter Password</p>
+                <input type="password" name="" placeholder="Re-Enter Password"> -->
+            </form>
+        </div>
+        <div class="submitbox">
+            <form>
+                <input type="Submit" name="" value="JOIN US!">
+                <br>
+                <a href="login.html">Already a Member? Login </a>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        © Webception · 2018
+    </div>
+</body>
+
+</html>

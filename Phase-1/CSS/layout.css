@@ -8,7 +8,7 @@ Licence: <a href="https://www.os-templates.com/template-terms">Website Template 
 
 html{overflow-y:scroll;} /* Forces a scrollbar when the viewport is larger than the websites content - CSS3 */
 
-body{margin:0; padding:0; font-size:13px; color:#FFFFFF; background-image:url(bgimage.jpg);background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("bgimage.jpg");
+body{margin:0; padding:0; font-size:13px; color:#FFFFFF; background-image:url(../Images/bgimage.jpg);background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../Images/bgimage.jpg");
 		/*background-image: url("bgimage.jpg");*/ ;background-repeat:no-repeat;background-size:cover;
 }
 
@@ -116,7 +116,7 @@ blockquote:after, q:after{content:' �'; font-size:26px; line-height:0;}
 #footer p{margin:0; padding:0;color: #FFFFFF}
 .bg {
     /* The image used */
-    background-image: url("/home/sujeeth/Desktop/img_11.jpg");
+    /* background-image: url("/home/sujeeth/Desktop/img_11.jpg"); */
     /* Full height */
     height: 100%;
     /* Center and scale the image nicely */
@@ -256,8 +256,8 @@ input#img-6:checked ~ .nav-dots label#img-dot-6 {
 .header{
         overflow: hidden;
         /* background-color: #f1f1f1; */
-        background-image: url("bgimage.jpg");
-        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("bgimage.jpg");
+        background-image: url("Images/bgimage.jpg");
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("Images/bgimage.jpg");
         background-size:cover;
 
         padding: 20px 20px;
@@ -370,7 +370,7 @@ input#img-6:checked ~ .nav-dots label#img-dot-6 {
 /* FOOTER */
 .wrapper_row3 , .footer{
         /* background-image: url("bgimage.jpg"); */
-        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("bgimage.jpg");
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("Images/bgimage.jpg");
         background: transparent;
         /* background-size:cover; */
         overflow: hidden;
