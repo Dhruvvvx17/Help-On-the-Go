@@ -4,7 +4,29 @@
     <title>Sign Up Page</title>
     <link rel="stylesheet" type="text/css" href="../CSS/signup_worker.css">
     <script src="../JS/signup_worker.js">
-    </script>    
+    </script>   
+    
+    <style type="text/css">
+        .submitbox input[type="submit"] {
+            width: 50%;
+            margin-bottom: 15px;
+            border: none;
+            outline: none;
+            height: 40px;
+            background: #f51010;
+            font-size: 18px;
+            border-radius: 20px;
+            font-weight: bold;
+            /* margin-top: 320px; */
+            margin-left: 60px;
+        }
+    
+        .submitbox input[type="submit"]:hover {
+            cursor: pointer;
+            background: #ffc107;
+            color: #000;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,62 +52,99 @@
     <div class="signupbox_worker">
         <img src="../Images/Avatar.jpg" class="avatar" alt="Avatar">
         <h1>SIGN UP AS A WORKER</h1>
-        <div class="left">
-            <form>
-                <p>First Name <sup>*</sup></p>
-                <input type="text" id="fname" name="" placeholder="Enter Firstname" required>
-                <p>Last Name <sup>*</sup></p>
-                <input type="text" id="lname"  name="" placeholder="Enter Lastname" required>
-                <p>Gender <sup>*</sup></p>
-                <input type="radio" name="gender">Male
-                <input type="radio" name="gender">Female
-                <p>E-Mail <sup>*</sup></p>
-                <input type="Email" id="email" name="" placeholder="Enter Email ID" required>
-                <p>Phone Number <sup>*</sup></p>
-                <p id="alert1" value="" style="font-weight: normal;margin-bottom: 10px;display: none;color:red;"></p>
-                <input type="tel" id="phno" name="" placeholder="Enter Ph. Number" required>
-                <p>Work Area <sup>*</sup></p>
-                <input type="text" id="area" name="" placeholder="Enter Area/Locality To Work In" required>
-                <p>Specific Apartemnt (if any)</p>
-                <input list="Apartments" name="" placeholder="Apartment (Only Registered With Our Site)">
-                <datalist id="Apartments">
-                    <option value="Rennaisance Rainbow,Brookfield">                    
-                    <option value = "Knights Bridge,Brookfield">
-                    <option value = "Springs Beauty,Brookfield">
-                    <option value = "Radical Rapsody,Brookfield">
-                </datalist>
-                <p id="alert3" value="" style="font-weight: normal;margin-bottom: 10px;color:white;"><sup>*</sup> Mandatory Fields</p>
-                
+        <div class="form-wrapper">
+            <form name="sign-in-form" action="../php/signup_worker.php" method="POST">
+                <div>
+                    <p>First Name <sup>*</sup></p>
+                    <input type="text" id="fname" name="" placeholder="Enter Firstname" required>
+                </div>
+                <div>
+                    <p>Last Name <sup>*</sup></p>
+                    <input type="text" id="lname"  name="" placeholder="Enter Lastname" required>
+                </div>
+                <div>
+                    <p>Gender <sup>*</sup></p>
+                    <input type="radio" name="gender">Male
+                    <input type="radio" name="gender">Female
+                </div>
+                <div>
+                    <p>E-Mail <sup>*</sup></p>
+                    <input type="Email" id="email" name="" placeholder="Enter Email ID" required>
+                </div>
+                <div>
+                    <p>Phone Number <sup>*</sup></p>
+                    <p id="alert1" value="" style="font-weight: normal;margin-bottom: 10px;display: none;color:red;"></p>
+                    <input type="tel" id="phno" name="" placeholder="Enter Ph. Number" required>
+                </div>
+                <div>
+                    <p>Work Area <sup>*</sup></p>
+                    <input type="text" id="area" name="" placeholder="Enter Area/Locality To Work In" required>
+                </div>
+                <div>
+                    <p>Specific Apartemnt (if any)</p>
+                    <input list="Apartments" name="" placeholder="Apartment (Only Registered With Our Site)">
+                    <datalist id="Apartments">
+                        <option value="Rennaisance Rainbow,Brookfield">
+                        <option value = "Knights Bridge,Brookfield">
+                        <option value = "Springs Beauty,Brookfield">
+                        <option value = "Radical Rapsody,Brookfield">
+                    </datalist>
+                    <p id="alert3" value="" style="font-weight: normal;margin-bottom: 10px;color:white;"><sup>*</sup> Mandatory Fields</p>
+                </div>
+
+                <!-- </div>
             </form>
         </div>
         <div class="right">
-            <form>    
-                <p style="margin-bottom:10px;">Select Work Type</p>
-                <input type="checkbox" name="work1" value="Maid">House Maid <br>
-                <input type="checkbox" name="work2" value="Cook"> Cook<br>
-                <input type="checkbox" name="work3" value="Driver"> Driver
-                <p>Expected charges per hour (in Rupees)</p>
-                <input type="number" name="" placeholder="Expected charges per hour">
-                <p>Expected Work Timings</p>
-                From &nbsp;<input type="time" name=""> &nbsp;&nbsp;&nbsp;To&nbsp;<input type="time" name="">
-                <p>UserName <sup>*</sup></p>
-                <input type="text" id="uname" name="" placeholder="Enter Username" required>
-                <p id="alert2" style="font-weight: normal;margin-bottom: 10px;display: none;color:red;"></p>
-                <p>Password <sup>*</sup></p>
-                <input type="password" id ="pwd" name="" placeholder="Enter Password" required >
-                <input type="password" id="pwd2" name="" placeholder="Re-Enter Password" required><br>
-                <input type="checkbox" onclick="showPassword()" style="width:15px; margin-left: 240px;">Show Password
-                <!-- <p>Re-enter Password</p>
-                <input type="password" name="" placeholder="Re-Enter Password"> -->
-            </form>
-        </div>
-        <div class="submitbox">
+            <form>     -->
+                <div>
+                    <p style="margin-bottom:10px;">Select Work Type</p>
+                    <input type="checkbox" name="work1" value="Maid">House Maid <br>
+                    <input type="checkbox" name="work2" value="Cook"> Cook<br>
+                    <input type="checkbox" name="work3" value="Driver"> Driver
+                </div>
+                <div>
+                    <p>Expected charges per hour (in Rupees)</p>
+                    <input type="number" name="" placeholder="Expected charges per hour">
+                </div>
+                <div>
+                    <p>Expected Work Timings</p>
+                    From &nbsp;<input type="time" name=""> &nbsp;&nbsp;&nbsp;To&nbsp;<input type="time" name="">
+                </div>
+                <div>
+                    <p>UserName <sup>*</sup></p>
+                    <input type="text" id="uname" name="" placeholder="Enter Username" required>
+                    <p id="alert2" style="font-weight: normal;margin-bottom: 10px;display: none;color:red;"></p>
+                </div>
+                <div>
+                    <p>Password <sup>*</sup></p>
+                    <input type="password" id ="pwd" name="" placeholder="Enter Password" required >
+                    <input type="password" id="pwd2" name="" placeholder="Re-Enter Password" required><br>
+                    <input type="checkbox" onclick="showPassword()" style="width:15px; margin-left: 240px;">Show Password
+                </div>
+                <div class="submitbox">
+                    <input type="submit" onclick="Validation()" name="" value="Sign Up!" >
+                    <br>
+                    <a href="login.html">Already a Member? Login </a>
+                </div>
+            <!-- </div> -->
+        </form>
+    </div>
+                    <!-- <p>Re-enter Password</p>
+                    <input type="password" name="" placeholder="Re-Enter Password"> -->
+
+                <!-- </div> -->
+                
+            <!-- </form>
+        </div> -->
+
+        <!-- <div class="submitbox">
             <form>
                 <input type="button" onclick="Validation()" name="" value="Sign Up!">
                 <br>
                 <a href="login.html">Already a Member? Login </a>
             </form>
-        </div>
+        </div> -->
     </div>
     <div class="footer">
         © Webception · 2018

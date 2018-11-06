@@ -23,6 +23,15 @@ body{
     padding: 70px 30px;
 }
 
+
+.form-wrapper > form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-wrapper > form > *{
+    width: 50%;
+}
 .avatar{
     width: 100px;
     height: 100px;
