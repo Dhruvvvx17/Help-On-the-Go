@@ -38,10 +38,19 @@ h1{
     font-size: 22px;
 }
 
+.form-wrapper > form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-wrapper > form > *{
+    width: 50%;
+}
+
     /* Left section */
 .signupbox_user .left{
     width: 410px;
-    height: 450px;
+    height: 850px;
     left:40px;
     position: absolute;
 }
@@ -88,7 +97,7 @@ h1{
     padding: 20px 20px;
 }
 
-.submitbox input[type="button"]{
+.submitbox input[type="submit"]{
 
     width: 50%;
     margin-bottom: 15px;
@@ -103,11 +112,12 @@ h1{
     margin-left: 60px;
 }
 
- .submitbox input[type="button"]:hover{
+ .submitbox input[type="submit"]:hover{
     cursor:pointer;
     background: #ffc107;
     color: #000;
 }
+
 
 .submitbox a{
     text-decoration: none;

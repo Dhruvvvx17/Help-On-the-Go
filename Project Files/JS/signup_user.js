@@ -11,6 +11,14 @@ function showPassword() {
 }
 
 function Validation() {
+    var check1 = 0;
+    var check2 = 0;
+    var check3 = 0;
+    var check4 = 0;
+    var check5 = 0;
+    var check6 = 0;
+    var check7 = 0;
+    var check8 = 0;
     // First Name Validation
     var fname = document.getElementById("fname");
     if (fname.value == "") {
@@ -18,6 +26,7 @@ function Validation() {
     }
     else {
         fname.style.borderBottom = "1px solid #fff";
+        check1 = 1;
     }
     // Last Name Validation
     var lname = document.getElementById("lname");
@@ -26,6 +35,7 @@ function Validation() {
     }
     else {
         lname.style.borderBottom = "1px solid #fff";
+        check2 = 1;
     }
     // Email Validation
     var email = document.getElementById("email");
@@ -34,6 +44,7 @@ function Validation() {
     }
     else {
         email.style.borderBottom = "1px solid #fff";
+        check3 = 1;
     }
     // Phone Number Validation
     var phno = document.getElementById("phno");
@@ -54,6 +65,7 @@ function Validation() {
     else {
         phno.style.borderBottom = "1px solid #fff";
         w.style.display = "none";
+        check4 = 1;
     }
 
     // Address Validation
@@ -63,6 +75,7 @@ function Validation() {
     }
     else {
         addr.style.borderBottom = "1px solid #fff";
+        check5 = 1;
     }
     // User Name Validation
     var uname = document.getElementById("uname");
@@ -71,6 +84,7 @@ function Validation() {
     }
     else {
         uname.style.borderBottom = "1px solid #fff";
+        check6 = 1;
     }
     // Password Validation
     var x = document.getElementById("pwd");
@@ -95,6 +109,7 @@ function Validation() {
         x.style.borderBottom = "1px solid #fff";
         y.style.borderBottom = "1px solid #fff";
         z.style.display = "none";
+        check7 = 1;
     }
 
     var u = document.getElementById("alert3");
@@ -105,5 +120,6 @@ function Validation() {
     }
     else{
         u.style.display = "none";
-    }
+        check8 = 1;
+    }    
 }

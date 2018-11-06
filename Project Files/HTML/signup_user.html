@@ -5,6 +5,28 @@
     <link rel="stylesheet" type="text/css" href="../CSS/signup_user.css">
     <script src="../JS/signup_user.js">
     </script>
+    <style type="text/css">
+        .submitbox input[type="submit"] {
+            width: 50%;
+            margin-bottom: 15px;
+            border: none;
+            outline: none;
+            height: 40px;
+            background: #f51010;
+            font-size: 18px;
+            border-radius: 20px;
+            font-weight: bold;
+            /* margin-top: 320px; */
+            margin-left: 60px;
+        }
+    
+        .submitbox input[type="submit"]:hover {
+            cursor: pointer;
+            background: #ffc107;
+            color: #000;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -13,8 +35,8 @@
         <div class="header-right">
             <a href="homepage-final.html">Home</a>
             <a href="login.html">Login</a>
-            <div class = dropdown  >
-                <button class = "dropbtn" style="background-color: dodgerblue ; color: white;">
+            <div class=dropdown>
+                <button class="dropbtn" style="background-color: dodgerblue ; color: white;">
                     Sign Up
                 </button>
                 <div class="dropdown-content">
@@ -30,45 +52,67 @@
     <div class="signupbox_user">
         <img src="../Images/Avatar.jpg" class="avatar" alt="Avatar">
         <h1>SIGN UP AS A USER</h1>
-        <div class="left">
-            <form>
-                <p>First Name <sup>*</sup></p>
-                <input type="text" id="fname" name="" placeholder="Enter Firstname" required>
-                <p>Last Name <sup>*</sup></p>
-                <input type="text" id="lname" name="" placeholder="Enter Lastname" required>
-                <p>E-Mail <sup>*</sup></p>
-                <input type="Email" id="email" name="" placeholder="Enter Email ID" required>
-                <p id="alert1" value="" style="font-weight: normal;margin-bottom: 10px;display: none;color:red;"></p>
-                <p>Phone Number <sup>*</sup></p>
-                <input type="tel" id="phno" name="" pattern="[0-9]{10}" placeholder="Enter Ph. Number" required>
-                <p id="alert3" value="" style="font-weight: normal;margin-bottom: 10px;color:white;"><sup>*</sup> Mandatory Fields</p>
+        <div class="form-wrapper">
+            <form name="sign-in-form" action="../php/signup_user.php" method="POST">
+                <div>
+                    <p>First Name <sup>*</sup></p>
+                    <input type="text" id="fname" name="firstName" placeholder="Enter Firstname" required>
+                </div>
+                <div>
+                    <p>Last Name <sup>*</sup></p>
+                    <input type="text" id="lname" name="lastName" placeholder="Enter Lastname" required>
+                </div>
+                <div>
+                    <p id="alert1" value="" style="font-weight: normal;margin-bottom: 10px;display: none;color:red;"></p>
+                    <p>Phone Number <sup>*</sup></p>
+                    <input type="tel" id="phno" name="phone" pattern="[0-9]{10}" placeholder="Enter Ph. Number" required>
+                </div>
+                <div>
+                    <p>E-Mail <sup>*</sup></p>
+                    <input type="Email" id="email" name="email" placeholder="Enter Email ID" required>
+                </div>
+                <div>
+                    <p>UserName <sup>*</sup></p>
+                    <input type="text" id="uname" name="username" placeholder="Enter Username" required>
+                </div>
+                <div>
+                    <p id="alert2" value="" style="font-weight: normal;margin-bottom: 10px;display: none;color:red;"></p>
+                    <p>Password <sup>*</sup></p>
+                    <input type="password" id="pwd" name="password" placeholder="Enter Password" required>
+                </div>
+                <div>
+                    <p> Address <sup>*</sup></p>
+                    <input type="text" id="addr" name="address" placeholder="Enter Address" required>
+                </div>
+                <div>
+                    <p>Re-enter Password <sup>*</sup></p>
+                    <input type="password" id="pwd2" name="confirmPassword" placeholder="Re-Enter Password" required><br>
+                </div>
+                <div>
+                    <p id="alert3" value="" style="font-weight: normal;margin-bottom: 10px;color:white;"><sup>*</sup>
+                        Mandatory Fields</p>
+                </div>
+                <div>
+                    <input type="checkbox" onclick="showPassword()" style="width:15px; margin-left: 240px;">Show
+                    Password
+                </div>
+                <div class="submitbox">
+                    <input type="submit" onclick="Validation()" name="" value="Sign Up!" >
+                    <br>
+                    <a href="login.html">Already a Member? Login </a>
+                </div>
             </form>
         </div>
-        <div class="right">
-            <form>
-                <p> Address <sup>*</sup></p>
-                <input type="text" id="addr" name="" placeholder="Enter Address" required>
-                <p>UserName <sup>*</sup></p>
-                <input type="text" id="uname" name="" placeholder="Enter Username" required>
-                <p id="alert2" value="" style="font-weight: normal;margin-bottom: 10px;display: none;color:red;"></p>
-                <p>Password <sup>*</sup></p>
-                <input type="password" id = "pwd" name="" placeholder="Enter Password" required >
-                <p>Re-enter Password <sup>*</sup></p>
-                <input type="password" id = "pwd2" name="" placeholder="Re-Enter Password" required><br>
-                <input type="checkbox" onclick="showPassword()" style="width:15px; margin-left: 240px;">Show Password
-                
-            </form>
-        </div>
-        <div class="submitbox">
-            <form>
-                <input type="button" onclick ="Validation()" name="" value="Sign Up!">
+        <!-- <div class="submitbox">
+            <form name = "submit_btn" action="../php/signup_user.php" method="POST">
+                <input type="button" onclick="Validation()" name="" value="Sign Up!">
                 <br>
                 <a href="login.html">Already a Member? Login </a>
             </form>
-        </div>
+        </div> -->
     </div>
     <div class="footer">
-        © Webception · 2018
+        ©Webception· 2018
     </div>
 </body>
 
