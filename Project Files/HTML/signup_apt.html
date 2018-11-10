@@ -36,7 +36,18 @@
     }
 
 
-/* USER SIGN UP BOX */
+/* APARTMENT SIGN UP BOX */
+
+.form-wrapper > form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-wrapper > form > *{
+    width: 50%;
+    height: 20%;
+}
+
 .signupbox_worker{
     width: 920px;
     height: 720px;
@@ -328,38 +339,55 @@ overflow: hidden;
     <div class="signupbox_worker">
         <img src="../Images/apt.jpg" class="avatar" alt="Avatar">
         <h1>REGISTER YOUR APARTMENT WITH US</h1>
-        <div class="left">
-            <form>
-                <p>Apartment's Name</p>
-                <input type="text" name="" placeholder="Enter The Apartment's Name">
-                <!-- <p>Last Name</p> -->
-                <!-- <input type="text" name="" placeholder="Enter Lastname"> -->
-                <p>BDA Approved?</p>
-                <input type="radio" name="gender">Yes<br>
-                <input type="radio" name="gender">No
-                <p>E-Mail</p>
-                <input type="Email" name="" placeholder="Enter Email ID of Management Head">
-                <p>Phone Number</p>
-                <input type="tel" name="" placeholder="Enter Ph. Number of Management Head">
-                <p> Address </p>
-                <input type="text" name="" placeholder="Enter Address of the Apartment">
+        <div class="form-wrapper">
+            <form name="register-apartment" action="../php/signup_apartment.php" method="POST">
+
+                <div>
+                    <p>Apartment's Name</p>
+                    <input type="text" name="" placeholder="Enter The Apartment's Name">
+                </div>
                 
-            </form>
+                <div>
+                    <p>BDA Approved?</p>
+                    <input type="text" name="bda" placeholder="Enter Yes or No">
+                </div>
+                
+                <div>
+                    <p>E-Mail</p>
+                    <input type="Email" name="" placeholder="Enter Email ID of Management Head">
+                </div>
+                
+                <div>
+                    <p>Phone Number</p>
+                    <input type="tel" name="" placeholder="Enter Ph. Number of Management Head">
+                </div>
+                
+                <div>
+                    <p> Address </p>
+                    <input type="text" name="" placeholder="Enter Address of the Apartment">
+                </div>
+                
+                
+            <!-- </form>
         </div>
         <div class="right">
-            <form>    
-                <p style="margin-bottom:10px;">Please Select the Class of Helpers Required</p>
-                <input type="checkbox" name="work1" value="Maid">House Maid <br>
-                <input type="checkbox" name="work2" value="Cook"> Cook<br>
-                <input type="checkbox" name="work3" value="Driver"> Driver
-                <!-- <p>Expected charges per hour (in Rupees)</p>
-                <input type="number" name="" placeholder="Expected charges per hour"> -->
-               <!--  <p>Expected Work Timings</p>
-                From &nbsp;<input type="time" name=""> &nbsp;&nbsp;&nbsp;To&nbsp;<input type="time" name=""> -->
-                <p>UserName</p>
-                <input type="text" name="" placeholder="Enter Username for Head of Management">
-                <p>Password</p>
-                <input type="password" name="" placeholder="Enter Password for Head of Management">
+            <form>     -->
+
+                <!-- <div>
+                        <p style="margin-bottom:10px;">Please Select the Class of Helpers Required</p>
+                        <input type="checkbox" name="work1" value="Maid">House Maid <br>
+                        <input type="checkbox" name="work2" value="Cook"> Cook<br>
+                        <input type="checkbox" name="work3" value="Driver"> Driver
+                </div> -->
+                <div>
+                    <p>UserName</p>
+                    <input type="text" name="" placeholder="Enter Username for Head of Management">
+                </div>
+                <div>
+                    <p>Password</p>
+                    <input type="password" name="" placeholder="Enter Password for Head of Management">
+               </div>
+                
                 <!-- <p>Re-enter Password</p>
                 <input type="password" name="" placeholder="Re-Enter Password"> -->
             </form>

@@ -2,12 +2,17 @@
     // obatining all fields from the form
     $firstname = $_POST['firstName'];
     $lastname = $_POST['lastName'];
+    $gender = $_POST['gender'];
+    $email = $_POST['email'];       
     $phone = $_POST['phone'];
-    $email = $_POST['Email'];
+    $workArea = $_POST['workArea'];
+    $apartment = $_POST['apartment'];  
+    $workType = $_POST['workType'];
+    $charges = $_POST['charges'];
+    $fromTime	 //doubts over here
+    $toTime	    //doubts over here
     $username = $_POST['username'];
-    $pw = $_POST['password'];
-    $addr = $_POST['address'];   
-    $pw2 = $_POST['confirmPassword'];
+    $password = $_POST['password'];
 
 
     // To check the form details once php script loads
@@ -15,19 +20,28 @@
     echo "<br>";
     echo $lastname;
     echo "<br>";
+    echo $gender;
+    echo "<br>";
     echo $email;
     echo "<br>";
     echo $phone;
     echo "<br>";
-    echo $addr;
+    echo $workArea;
+    echo "<br>";
+    echo $apartment;
+    echo "<br>";
+    echo $workType;
+    echo "<br>";
+    echo $charges;
+    echo "<br>";
+    echo $fromTime;     //doubts here as well
+    echo "<br>";
+    echo $toTime;
     echo "<br>";
     echo $username;
     echo "<br>";
-    echo $pw;
+    echo $password;
     echo "<br>";
-    echo $pw2;
-    echo "<br>";
-
     
     // Steps to run this php code:
     // 1.Turn on MYSQL through xampp server.
@@ -39,7 +53,7 @@
     $host = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
-    $dbname = "testdb";
+    $dbname = "wtproj";
 
     // create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);

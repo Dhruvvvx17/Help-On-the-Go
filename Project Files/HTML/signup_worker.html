@@ -56,11 +56,11 @@
             <form name="sign-in-form" action="../php/signup_worker.php" method="POST">
                 <div>
                     <p>First Name <sup>*</sup></p>
-                    <input type="text" id="fname" name="" placeholder="Enter Firstname" required>
+                    <input type="text" id="fname" name="firstName" placeholder="Enter Firstname" required>
                 </div>
                 <div>
                     <p>Last Name <sup>*</sup></p>
-                    <input type="text" id="lname"  name="" placeholder="Enter Lastname" required>
+                    <input type="text" id="lname"  name="lastName" placeholder="Enter Lastname" required>
                 </div>
                 <div>
                     <p>Gender <sup>*</sup></p>
@@ -69,20 +69,20 @@
                 </div>
                 <div>
                     <p>E-Mail <sup>*</sup></p>
-                    <input type="Email" id="email" name="" placeholder="Enter Email ID" required>
+                    <input type="Email" id="email" name="email" placeholder="Enter Email ID" required>
                 </div>
                 <div>
                     <p>Phone Number <sup>*</sup></p>
                     <p id="alert1" value="" style="font-weight: normal;margin-bottom: 10px;display: none;color:red;"></p>
-                    <input type="tel" id="phno" name="" placeholder="Enter Ph. Number" required>
+                    <input type="tel" id="phno" name="phone" placeholder="Enter Ph. Number" required>
                 </div>
                 <div>
                     <p>Work Area <sup>*</sup></p>
-                    <input type="text" id="area" name="" placeholder="Enter Area/Locality To Work In" required>
+                    <input type="text" id="area" name="workArea" placeholder="Enter Area/Locality To Work In" required>
                 </div>
                 <div>
                     <p>Specific Apartemnt (if any)</p>
-                    <input list="Apartments" name="" placeholder="Apartment (Only Registered With Our Site)">
+                    <input list="Apartments" name="apartment" placeholder="Apartment (Only Registered With Our Site)">
                     <datalist id="Apartments">
                         <option value="Rennaisance Rainbow,Brookfield">
                         <option value = "Knights Bridge,Brookfield">
@@ -99,21 +99,21 @@
             <form>     -->
                 <div>
                     <p style="margin-bottom:10px;">Select Work Type</p>
-                    <input type="checkbox" name="work1" value="Maid">House Maid <br>
-                    <input type="checkbox" name="work2" value="Cook"> Cook<br>
-                    <input type="checkbox" name="work3" value="Driver"> Driver
+                    <input type="checkbox" name="workType" value="Maid">House Maid <br>
+                    <input type="checkbox" name="workType" value="Cook"> Cook<br>
+                    <input type="checkbox" name="workType" value="Driver"> Driver
                 </div>
                 <div>
                     <p>Expected charges per hour (in Rupees)</p>
-                    <input type="number" name="" placeholder="Expected charges per hour">
+                    <input type="number" name="charges" placeholder="Expected charges per hour">
                 </div>
                 <div>
                     <p>Expected Work Timings</p>
-                    From &nbsp;<input type="time" name=""> &nbsp;&nbsp;&nbsp;To&nbsp;<input type="time" name="">
+                    From &nbsp;<input type="time" name="time"> &nbsp;&nbsp;&nbsp;To&nbsp;<input type="time" name="">
                 </div>
                 <div>
                     <p>UserName <sup>*</sup></p>
-                    <input type="text" id="uname" name="" placeholder="Enter Username" required>
+                    <input type="text" id="uname" name="username" placeholder="Enter Username" required>
                     <p id="alert2" style="font-weight: normal;margin-bottom: 10px;display: none;color:red;"></p>
                 </div>
                 <div>
