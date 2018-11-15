@@ -3,7 +3,7 @@
     $firstname = $_POST['firstName'];
     $lastname = $_POST['lastName'];
     $phone = $_POST['phone'];
-    $email = $_POST['Email'];
+    $email = $_POST['email'];
     $username = $_POST['username'];
     $pw = $_POST['password'];
     $addr = $_POST['address'];   
@@ -76,4 +76,6 @@
 
     $stmt->close();
     $conn->close();
+
+    echo '<script>window.location.assign(\'../HTML/accConfirm.html\');</script>'
 ?>
