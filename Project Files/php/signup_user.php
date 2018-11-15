@@ -73,6 +73,44 @@
     else{
         echo "Email ID already registered";
     }
+    echo"<br>";
+    echo getcwd();
+    echo"<br>";
+
+//-------------------------------- 
+    require ("../phpmailertest/class.phpmailer.php");
+
+    $mail = new PHPMailer;
+
+    $mail->isSMTP();                            // Set mailer to use SMTP
+    $mail->Host = 'smtp.gmail.com';             // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                     // Enable SMTP authentication
+    $mail->Username = 'help.onthego1@gmail.com';          // SMTP username
+    $mail->Password = '$password@123'; // SMTP password
+    $mail->SMTPSecure = 'tls';                  // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 587;                          // TCP port to connect to
+
+    $mail->setFrom('help.onthego1@gmail.com', 'HelpOnTheGo');
+    $mail->addReplyTo('help.onthego1@gmail.com', 'HelpOnTheGo');
+    $mail->addAddress("$email");   // Add a recipient
+    // $mail->addCC('cc@example.com');
+    // $mail->addBCC('bcc@example.com');
+
+    $mail->isHTML(true);  // Set email format to HTML
+
+    $bodyContent = '<h1>Account Verification Mail from Help On The Go</h1>';
+    $bodyContent .= '<p>Thank you for using <b>Help On The Go</b> Your account has been verified and you can start using our services.<br> For any feedback or query please contact us on: help.onthego1@gmail.com </p>';
+
+    $mail->Subject = 'Help On The Go Account Confirmation';
+    $mail->Body    = $bodyContent;
+
+    if(!$mail->send()) {
+        echo 'Message could not be sent.';
+        echo 'Mailer Error: ' . $mail->ErrorInfo;
+    } else {
+        echo 'Message has been sent';
+    }
+// ----------------------------
 
     $stmt->close();
     $conn->close();
