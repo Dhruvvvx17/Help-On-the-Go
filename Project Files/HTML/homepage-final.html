@@ -10,7 +10,7 @@
 		font-family: Arial, Helvetica, sans-serif ;
 		}
 
-	.cb-slideshow,
+	/* .cb-slideshow,
 	.cb-slideshow:after { 
 	    position: fixed;
 	    width: 100%;
@@ -37,7 +37,7 @@
     opacity: 0;
     z-index: 0;
     animation: imageAnimation 36s linear infinite 0s; 
-	}
+	} */
 
 	/*@media screen and (max-width: 500px) {
   	.header a {
@@ -98,15 +98,20 @@
 	} 
 
 	.button{
+		/* margin: 0 auto; */
 		position: absolute;
 		top: 60%;
-		left: 21%;
+		left: 40%;
+		/* height: 10px;
+		width: 500px; */
 		/*transform: translate(-50%,-50%);*/
 	}
 
 	.btn{
 		border: 1px solid #ffffff;
 		padding: 10px 30px;
+		margin: 10px;
+		/* flex: 1; */
 		color: #ffffff;
 		text-decoration: none;
 		transition: 0.6s ease;
@@ -117,7 +122,12 @@
 		color: #000000;
 	}
 
-
+.button {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
 
 
 	</style>
@@ -139,7 +149,7 @@
 	<header>
 		<div class="main" style="font-size:20px;">
 			<ul>
-				<li><a href="#">Home</a></li>
+				<!-- <li><a href="#">Home</a></li> -->
 				<li><a href="#">Services</a></li>
 				<li><a href="#">Gallery</a></li>
 				<li><a href="#">About</a></li>
@@ -149,7 +159,7 @@
 		<div class="title">
 			<h1 style="font-family: Arial, Helvetica, sans-serif ">HELP ON THE GO</h1>
 		</div>
-
+		
 		<div class="button">
 			<a href="login.html" class="btn">LOGIN</a>
 			<a href="signup_user.html" class="btn">SIGN UP AS A USER</a>

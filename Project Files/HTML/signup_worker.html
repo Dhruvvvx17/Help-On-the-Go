@@ -1,4 +1,3 @@
-@@ -0,0 +1,161 @@
 <html>
 
 <head>
@@ -57,11 +56,11 @@
             <form name="sign-in-form" action="../php/signup_worker.php" method="POST">
                 <div>
                     <p>First Name <sup>*</sup></p>
-                    <input type="text" id="fname" name="" placeholder="Enter Firstname" required>
+                    <input type="text" id="fname" name="firstName" placeholder="Enter Firstname" required>
                 </div>
                 <div>
                     <p>Last Name <sup>*</sup></p>
-                    <input type="text" id="lname"  name="" placeholder="Enter Lastname" required>
+                    <input type="text" id="lname"  name="lastName" placeholder="Enter Lastname" required>
                 </div>
                 <div>
                     <p>Gender <sup>*</sup></p>
@@ -70,12 +69,12 @@
                 </div>
                 <div>
                     <p>E-Mail <sup>*</sup></p>
-                    <input type="Email" id="email" name="" placeholder="Enter Email ID" required>
+                    <input type="Email" id="email" name="email" placeholder="Enter Email ID" required>
                 </div>
                 <div>
                     <p>Phone Number <sup>*</sup></p>
                     <p id="alert1" value="" style="font-weight: normal;margin-bottom: 10px;display: none;color:red;"></p>
-                    <input type="tel" id="phno" name="" placeholder="Enter Ph. Number" required>
+                    <input type="tel" id="phno" name="phone" placeholder="Enter Ph. Number" required>
                 </div>
                 <div>
                     <p>Work Area <sup>*</sup></p>
@@ -83,50 +82,42 @@
                 </div>
                 <div>
                     <p>Specific Apartemnt (if any)</p>
-                    <input list="Apartments" name="" placeholder="Apartment (Only Registered With Our Site)">
+                    <input list="Apartments" name="apartment" placeholder="Apartment (Only Registered With Our Site)">
                     <datalist id="Apartments">
                         <option value="Rennaisance Rainbow,Brookfield">
                         <option value = "Knights Bridge,Brookfield">
                         <option value = "Springs Beauty,Brookfield">
                         <option value = "Radical Rapsody,Brookfield">
                     </datalist>
-                    <p id="alert3" value="" style="font-weight: normal;margin-bottom: 10px;color:white;"><sup>*</sup> Mandatory Fields</p>
+                    <!-- <p id="alert3" value="" style="font-weight: normal;margin-bottom: 10px;color:white;"><sup>*</sup> Mandatory Fields</p> -->
                 </div>
 
            <div>
                     <p>Preferred Work Type</p>
-                    <input list="WorkTypes" name="" placeholder="Work Types(Only Registered With Our Site)">
+                    <input list="WorkTypes" name="workType" placeholder="Work Types(Only Registered With Our Site)">
                     <datalist id="WorkTypes">
                         <option value="Maid">
                         <option value = "Driver">
                     </datalist>
-                    <p id="alert3" value="" style="font-weight: normal;margin-bottom: 10px;color:white;"><sup>*</sup> Mandatory Fields</p>
+                    <!-- <p id="alert3" value="" style="font-weight: normal;margin-bottom: 10px;color:white;"><sup>*</sup> Mandatory Fields</p> -->
                 </div>
-                <!--<div>
-                     <p>Choose your preferred type of work:</p>
-                    <input list="WorkType" name="" placeholder="WorkType: (Choose one from below)">
-                    <datalist id="Work Types">
-                        <option value="Maid">
-                        <option value = "Driver">
-                    </datalist>
-                    <p id="alert3" value="" style="font-weight: normal;margin-bottom: 10px;color:white;"><sup>*</sup> Mandatory Fields</p>
-                </div>-->
+
                 <div>
                     <p>Expected charges per hour (in Rupees)</p>
-                    <input type="number" name="" placeholder="Expected charges per hour">
+                    <input type="number" name="charges" placeholder="Expected charges per hour">
                 </div>
                 <div>
                     <p>Expected work hours</p>
-                    <input type="number" name="" placeholder="Expected work hours">
+                    <input type="number" name="hours" placeholder="Enter the number of hours">
                 </div>
                 <div>
                     <p>UserName <sup>*</sup></p>
-                    <input type="text" id="uname" name="" placeholder="Enter Username" required>
+                    <input type="text" id="uname" name="username" placeholder="Enter Username" required>
                     <p id="alert2" style="font-weight: normal;margin-bottom: 10px;display: none;color:red;"></p>
                 </div>
                 <div>
                     <p>Password <sup>*</sup></p>
-                    <input type="password" id ="pwd" name="" placeholder="Enter Password" required >
+                    <input type="password" id ="pwd" name="password" placeholder="Enter Password" required >
                     <input type="password" id="pwd2" name="" placeholder="Re-Enter Password" required><br>
                     <input type="checkbox" onclick="showPassword()" style="width:15px; margin-left: 240px;">Show Password
                 </div>

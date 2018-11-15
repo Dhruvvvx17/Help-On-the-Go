@@ -9,8 +9,8 @@
     $apartment = $_POST['apartment'];  
     $workType = $_POST['workType'];
     $charges = $_POST['charges'];
-    $fromTime	 //doubts over here
-    $toTime	    //doubts over here
+    // $fromTime	 //doubts over here
+    $hours = $_POST['hours'];
     $username = $_POST['username'];
     $password = $_POST['password'];
 
@@ -34,9 +34,11 @@
     echo "<br>";
     echo $charges;
     echo "<br>";
-    echo $fromTime;     //doubts here as well
-    echo "<br>";
-    echo $toTime;
+    // echo $fromTime;     //doubts here as well
+    // echo "<br>";
+    // echo $toTime;
+    // echo "<br>";
+    echo $hours;
     echo "<br>";
     echo $username;
     echo "<br>";
@@ -64,7 +66,7 @@
     else{
         echo "<br>Connected<br>";
         $SELECT = "SELECT email From usersignup Where email = ? Limit 1";
-        $INSERT = "INSERT Into usersignup (firstname,lastname,email,phone,address,username,password) values(?,?,?,?,?,?,?)";    
+        $INSERT = "INSERT Into usersignup (firstname,lastname,,gender,email,phone,workArea,apartment,workType,charges,hours,username,password) values(?,?,?,?,?,?,?,?,?,?,?,?)";    
     }
     
     // Prepare statement
