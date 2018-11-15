@@ -39,7 +39,7 @@
     $host = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
-    $dbname = "wtproj";
+    $dbname = "testdb";
 
     // create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
