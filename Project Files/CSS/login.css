@@ -61,7 +61,7 @@ h1{
 }
 
     /* Submit Button */
-.loginbox input[type="button"]{
+.loginbox input[type="submit"]{
     border: none;
     outline:none;
     height: 40px;
@@ -82,7 +82,7 @@ h1{
 
     /* On Mouse Hover */
         /* button */
-.loginbox input[type="button"]:hover{
+.loginbox input[type="submit"]:hover{
     cursor:pointer;
     background: #ffc107;
     color: #000;
