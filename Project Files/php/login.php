@@ -2,10 +2,10 @@
     $email = $_POST['email'];
     $pwd = $_POST['pwd'];
 
-    echo $email;
-    echo "<br>";
-    echo $pwd;
-    echo "<br>";
+    // echo $email;
+    // echo "<br>";
+    // echo $pwd;
+    // echo "<br>";
  
   // database constructs
     $host = "localhost";
@@ -28,15 +28,17 @@
     $q = mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($q);
 
-    echo "row:","$row";
+    // echo "row:","$row";
     echo"<br>";
 
     if(!$row){
-        echo 'E-mail Not Registered!';
+            echo '<script>alert("E-mail not registered")</script>';
+            echo '<script>window.location.assign(\'../HTML/login.html\');</script>';
     }
     else{
         if($row['password'] != $_POST['pwd'] ){
-            echo 'E-mail Or Password Does Not Match';
+            echo '<script>alert("E-mail Or Password Does Not Match")</script>';
+            echo '<script>window.location.assign(\'../HTML/login.html\');</script>';
         }
         else{ //Registered credentials , User can login!
             //Start session
