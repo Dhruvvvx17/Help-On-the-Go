@@ -24,7 +24,7 @@
     
     echo "<br>Connected<br>";
 
-    $query = "SELECT * FROM usersignup WHERE Email like $email;";
+    $query = "SELECT * FROM usersignup WHERE Email='$email';";
     $q = mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($q);
 
@@ -35,10 +35,11 @@
         echo 'E-mail Not Registered!';
     }
     else{
-        if(row['password'] != $_POST['pwd'] ){
+        if($row['password'] != $_POST['pwd'] ){
             echo 'E-mail Or Password Does Not Match';
         }
-        else{
+        else{ //Registered credentials , User can login!
+            //Start session
             echo '<script>window.location.assign(\'../HTML/services.html\');</script>';
         }
     }
