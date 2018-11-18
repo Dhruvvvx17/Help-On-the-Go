@@ -82,16 +82,14 @@ $result = $conn->query($sql);
                   while ($row=$result->fetch_assoc()) {
                   ?>
                   
-                  <form method="post" action="trythis.php">
+                  <form method="post" action="workerlist.php">
                   <li>
                     <div class="image">
-                      <a href="#"><img src="css/images/dp.png" alt="" /></a>
+                      <a href="#"><img src="../Images/dp.png" alt="" /></a>
                     </div>
                     <p>
                       Name: <span><?php echo $row['firstname']?></span><br/>
-                      <br>
                       Phone : <span><?php echo $row['phone']?></span><br />
-                      <br>
                       Charges : <span><?php echo $row['charges']?></span><br />
                       <input type="hidden" name="name" value="<?php echo $row['firstname']; ?>"/>
                     </p>
