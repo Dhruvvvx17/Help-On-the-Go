@@ -74,7 +74,7 @@ $result = $conn->query($sql);
         font-size:35px;margin-left:510px;color:white">CHOOSE WORKER</h1>
         
   <div class="tabbed">
-  <div class="tab-content" style="display:block;">
+  <div class="tab-content" style="display:block;margin-left:150px">
             <div class="items">
               <div class="cl">&nbsp;</div>
               <ul>
