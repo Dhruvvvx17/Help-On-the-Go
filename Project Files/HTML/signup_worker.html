@@ -56,11 +56,11 @@
             <form name="sign-in-form" action="../php/signup_worker.php" method="POST">
                 <div>
                     <p>First Name <sup>*</sup></p>
-                    <input type="text" id="fname" name="firstName" placeholder="Enter Firstname" required>
+                    <input type="text" id="fname" name="firstName" placeholder="Enter Firstname" required autocomplete="off">
                 </div>
                 <div>
                     <p>Last Name <sup>*</sup></p>
-                    <input type="text" id="lname"  name="lastName" placeholder="Enter Lastname" required>
+                    <input type="text" id="lname"  name="lastName" placeholder="Enter Lastname" required autocomplete="off">
                 </div>
                 <div>
                     <p>Gender <sup>*</sup></p>
@@ -69,16 +69,16 @@
                 </div>
                 <div>
                     <p>E-Mail <sup>*</sup></p>
-                    <input type="Email" id="email" name="email" placeholder="Enter Email ID" required>
+                    <input type="Email" id="email" name="email" placeholder="Enter Email ID" required autocomplete="off">
                 </div>
                 <div>
                     <p>Phone Number <sup>*</sup></p>
                     <p id="alert1" value="" style="font-weight: normal;margin-bottom: 10px;display: none;color:red;"></p>
-                    <input type="tel" id="phno" name="phone" placeholder="Enter Ph. Number" required>
+                    <input type="tel" id="phno" name="phone" placeholder="Enter Ph. Number" required autocomplete="off">
                 </div>
                 <div>
                     <p>Work Area <sup>*</sup></p>
-                    <input type="text" id="area" name="workArea" placeholder="Enter Area/Locality To Work In" required>
+                    <input type="text" id="area" name="workArea" placeholder="Enter Area/Locality To Work In" required autocomplete="off">
                 </div>
                 <div>
                     <p>Specific Apartemnt (if any)</p>
@@ -104,21 +104,21 @@
 
                 <div>
                     <p>Expected charges per hour (in Rupees)</p>
-                    <input type="number" name="charges" placeholder="Expected charges per hour">
+                    <input type="number" name="charges" placeholder="Expected charges per hour" autocomplete="off">
                 </div>
                 <div>
                     <p>Expected work hours</p>
-                    <input type="number" name="hours" placeholder="Enter the number of hours">
+                    <input type="number" name="hours" placeholder="Enter the number of hours" autocomplete="off">
                 </div>
                 <div>
                     <p>UserName <sup>*</sup></p>
-                    <input type="text" id="uname" name="username" placeholder="Enter Username" required>
+                    <input type="text" id="uname" name="username" placeholder="Enter Username" required autocomplete="off">
                     <p id="alert2" style="font-weight: normal;margin-bottom: 10px;display: none;color:red;"></p>
                 </div>
                 <div>
                     <p>Password <sup>*</sup></p>
-                    <input type="password" id ="pwd" name="password" placeholder="Enter Password" required >
-                    <input type="password" id="pwd2" name="" placeholder="Re-Enter Password" required><br>
+                    <input type="password" id ="pwd" name="password" placeholder="Enter Password" required autocomplete="off">
+                    <input type="password" id="pwd2" name="" placeholder="Re-Enter Password" required autocomplete="off"><br>
                     <input type="checkbox" onclick="showPassword()" style="width:15px; margin-left: 240px;">Show Password
                 </div>
                 <div class="submitbox">

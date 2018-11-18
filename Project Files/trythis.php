@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "wtproj";
+$dbname = "testdb";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 
 ?>
 <?php
-$sql = "SELECT name, age, pwt FROM details";
+$sql = "SELECT firstname, phone, charges FROM signup_worker";
 $result = $conn->query($sql);
 
 //if ($result->num_rows > 0) {
@@ -61,21 +61,19 @@ $result = $conn->query($sql);
   <a href="#default" class="logo" style="font-size:30px;">Help On The Go</a>
   <div class="header-right">
     <!-- <a href="homepage-final.html">Home</a> -->
-    <a class="active" href="#Home">Home</a>
-    <a href="homepage-final.html">Sign Out</a>
+    <a class="active" href="HTML/services.html">Home</a>
+    <a href="../HTML/login.html">Sign Out</a>
     <a href="#about">About</a>
   </div>
 </div>
 <!-- content -->
 <br>
 <br>
-<div class="wrapper row2">
-  <h1 align="center"><font color=white>CHOOSE  WORKER</font></h1>
-  <br>
-  <br>
-  <div id="container">
+<br>
+<h1 style="color: #ffffff;
+        font-size:35px;margin-left:510px;color:white">CHOOSE WORKER</h1>
         
-        <div class="tabbed">
+  <div class="tabbed">
   <div class="tab-content" style="display:block;">
             <div class="items">
               <div class="cl">&nbsp;</div>
@@ -90,11 +88,15 @@ $result = $conn->query($sql);
                       <a href="#"><img src="css/images/dp.png" alt="" /></a>
                     </div>
                     <p>
-                      NAME: <span><?php echo $row['name']?></span><br />
-                      AGE : <span><?php echo $row['age']?></span><br />
-                      <input type="hidden" name="name" value="<?php echo $row['name']; ?>"/>
+                      Name: <span><?php echo $row['firstname']?></span><br/>
+                      <br>
+                      Phone : <span><?php echo $row['phone']?></span><br />
+                      <br>
+                      Charges : <span><?php echo $row['charges']?></span><br />
+                      <input type="hidden" name="name" value="<?php echo $row['firstname']; ?>"/>
                     </p>
-                    <input class="submit" name="submit" type="submit" value="CHOOSE">
+                    <input type="button" class="submit" name="submit"  value="CHOOSE" style="float: center; background-color: dodgerblue;
+                    color:white;padding: 10px 16px;width: 100%;border-radius: 15px;" onclick="window.location.href='../HTML/bookingConfirm.html'">
                   </li>
                   </form>
                   
@@ -104,6 +106,7 @@ $result = $conn->query($sql);
                   if(isset($_POST['submit'])){ // Fetching variables of the form which travels in URL
                     $name = $_POST['name'];
                     $conn->query("insert into picked(name) values ('$name')");
+                    //echo '<script>window.location.assign(\'../HTML/confirm.html\');</script>';
                   }
                   //till here the above code should be in the php page which you want after clicking on choose you have to do $_POST['name'] for hidden type input on line 95.
                   ?>

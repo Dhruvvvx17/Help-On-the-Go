@@ -38,7 +38,7 @@
     $host = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
-    $dbname = "wtproj";
+    $dbname = "testdb";
 
     // create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
@@ -64,7 +64,7 @@
     if($rnum==0){
         $stmt->close();
         $stmt = $conn->prepare($INSERT);
-        $stmt->bind_param("s,s,s,i,s,s,s",$apartment,$bda,$email,$phone,$address,$username,$password);
+        $stmt->bind_param("sssisss",$apartment,$bda,$email,$phone,$address,$username,$password);
         $stmt->execute();
         echo "New Record inserted successfully";
     }
