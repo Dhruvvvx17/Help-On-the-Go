@@ -1,0 +1,285 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../Images/bgimage.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* USER SIGN UP BOX */
+.signupbox_apartment{
+    width: 840px;
+    height: 850px;
+    background: #000;
+    color: #fff;
+    opacity: 0.9;
+    margin-top: 480px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+
+.form-wrapper > form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-wrapper > form > *{
+    width: 50%;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -45px;
+    left: calc(50% - 50px); 
+}
+
+h1{
+    margin:0;
+    padding:0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+    /* Left section */
+.signupbox_apartment .left{
+    width: 410px;
+    height: 450px;
+    padding: 10px;
+    position: absolute;
+}
+
+    /* Right section */
+.signupbox_apartment .right{
+    width: 410px;
+    height: 450px;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+}
+    /* Field Names */
+.signupbox_apartment p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+    /* Input Fields*/
+.signupbox_apartment input{
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+
+    /* First Name , Last Name , Email , Ph no.*/
+.signupbox_apartment input[type="text"] , [type="email"] , [type="password"], [type="tel"] ,[type="number"] ,input[list]{
+    border:none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.signupbox_apartment input[type="checkbox"]{
+    width: 20%;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.signupbox_apartment input[type="radio"]{
+    width: 10%;
+    margin-top: 5px;
+}
+
+
+.signupbox_apartment input[type="time"]{
+    width: 28%;
+    margin-bottom: 29px;
+    margin-top: 20px;
+    border-bottom: 1px solid white;
+    background: white;
+    outline: none;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+    /* Submit Button */
+.signupbox_apartment .submitbox{
+    width: 250px;
+    height: 60px;
+    /* left:260px;
+    top:415px; */
+    left: 33%;
+    top: 87%;
+    position: absolute;
+    background: #000;
+    padding: 20px 20px;
+}
+
+.submitbox input[type="button"]{
+
+    width: 50%;
+    margin-bottom: 15px;
+    border: none;
+    outline:none;
+    height: 40px;
+    background: #f51010;
+    font-size: 18px;
+    border-radius: 20px;
+    font-weight: bold; 
+    /* margin-top: 320px; */
+    margin-left: 60px;
+}
+
+ .submitbox input[type="button"]:hover{
+    cursor:pointer;
+    background: #ffc107;
+    color: #000;
+}
+
+.submitbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
+    margin-left: 55px;   
+}
+
+.submitbox a:hover{
+    color:#ffc107;
+}
+
+/* ----------------------------------------------------- */
+
+/* HEADER */
+.header{
+        overflow: hidden;
+        background-color: #f1f1f1;
+        padding: 20px 20px;
+    }
+
+    /* links in header */
+.header a{
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 10px;
+}
+
+.header a.logo{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header-right{
+    float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
+
+
+    /* On mouse hover */
+  .header a:hover{
+    background-color: #ddd;
+    color: black;
+}
+/* ----------------------------------------------------- */
+
+
+/* DROP DOWN BOX */
+.dropdown {
+    float: left;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+
+}
+
+    /* button on header */
+.dropbtn {
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    text-decoration: none;
+}
+
+    /* dropdown-list */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+    /*dropdown list contents*/
+.dropdown-content a{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+    /* On mouse hover */
+        /* button */
+.dropbtn:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+        /* dropdown list */
+.dropdown:hover .dropdown-content {
+    display:block ;
+    border-radius: 10px;
+}
+
+        /* links in dropdown list */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+/* ----------------------------------------------------- */
+
+
+/* FOOTER */
+.footer{
+        overflow: hidden;
+        /* background-color: #f1f1f1; */
+        padding: 6px 10px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+}

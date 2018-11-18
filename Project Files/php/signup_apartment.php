@@ -1,6 +1,5 @@
 <?php
-        error_reporting(E_ALL);
-        ini_set('display_errors', 1);
+       
         $apartment = $_POST['name'];
         $bda = $_POST['bda'];
         $email = $_POST['email'];
@@ -67,6 +66,7 @@
         $stmt->bind_param("sssisss",$apartment,$bda,$email,$phone,$address,$username,$password);
         $stmt->execute();
         echo "New Record inserted successfully";
+        echo '<script>window.location.assign(\'../HTML/accConfirm.html\');</script>';
     }
     else{
         echo "Email ID already registered";
