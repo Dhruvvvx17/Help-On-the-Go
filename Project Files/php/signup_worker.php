@@ -1,8 +1,6 @@
 <?php
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
-    // obatining all fields from the form
-    // if(isset($_POST['SUBMIT'])){
         $firstname = $_POST['firstName'];
         $lastname = $_POST['lastName'];
         $gender = $_POST['gender'];
@@ -17,8 +15,6 @@
         $hours = $_POST['hours'];
         $username = $_POST['username'];
         $password = $_POST['password'];
-        // echo "$firstname";
-    // }
 
 
 
